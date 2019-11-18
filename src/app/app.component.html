@@ -10,10 +10,10 @@
     </mat-panel-title>
   </mat-expansion-panel-header>
 
-  <div class="inputfield"> 
+  <div class="inputfield">
 
      <mat-form-field color="accent">
-          <input matInput [(ngModel)]="e.id" matInput  placeholder="Enter Id">
+          <input matInput [(ngModel)]="e.id" matInput  placeholder="Enter ID">
      </mat-form-field>
 
      <mat-form-field color="accent">
@@ -32,7 +32,7 @@
           <option value="B">&gt;=70 and &lt;80 </option>
           <option value="A">&gt;=80 and &lt;90 </option>
           <option value="None">Invalid marks</option>
-      
+
         </select>
       </mat-form-field>
 
@@ -59,7 +59,7 @@
     </mat-card-title>
     <mat-card-content>
 
-    
+
         {{ee.name}}
          <br>
         {{ee.address}}
@@ -82,22 +82,22 @@
 <mat-expansion-panel class="noteinputdelete" >
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Delete 
+        Delete
       </mat-panel-title>
     </mat-expansion-panel-header>
-  
-    <div class="inputdelete"> 
-  
+
+    <div class="inputdelete">
+
        <mat-form-field color="accent">
-            <input  [(ngModel)]="d_id" matInput  placeholder="Enter Id to be deleted">
+            <input  [(ngModel)]="d_id" matInput  placeholder="Enter ID to be deleted">
        </mat-form-field>
-  
+
     </div>
-  
+
     <div class="notedelte">
        <button mat-button (click)="deleteid()" color="accent">Done</button>
     </div>
-  
+
   </mat-expansion-panel>
 
 
@@ -116,11 +116,11 @@
         Update the Records!
       </mat-panel-title>
     </mat-expansion-panel-header>
-  
-    <div class="inputfield"> 
-  
+
+    <div class="inputfield">
+
        <mat-form-field color="accent">
-            <input matInput [(ngModel)]="search_id" matInput  placeholder="Enter Id to be updated">
+            <input matInput [(ngModel)]="search_id" matInput  placeholder="Enter ID to be updated">
        </mat-form-field>
 
 
@@ -141,14 +141,14 @@
           <button mat-button (click)="update()" color="accent">Update</button>
        </div>
 
-  
-  
-  
-  
-    </div>
-  
 
-  
+
+
+
+    </div>
+
+
+
   </mat-expansion-panel>
 
 
@@ -159,37 +159,37 @@
           Search the Records!
         </mat-panel-title>
       </mat-expansion-panel-header>
-    
-      <div class="inputfield"> 
-    
+
+      <div class="inputfield">
+
          <mat-form-field color="accent">
-              <input matInput [(ngModel)]="search_id_record" matInput  placeholder="Enter Id to be Searched">
+              <input matInput [(ngModel)]="search_id_record" matInput  placeholder="Enter ID to be Searched">
          </mat-form-field>
          <div class="notesearch">
             <button mat-button (click)="searchme()" color="accent">Search</button>
          </div>
-  
-  
+
+
          <mat-form-field color="accent">
             <input matInput  matInput  placeholder="{{search_val_name}}">
          </mat-form-field>
-  
+
          <mat-form-field color="accent">
             <input matInput   placeholder="{{search_val_add}}">
          </mat-form-field>
-  
+
          <mat-form-field color="accent">
             <input matInput matInput  placeholder="{{search_grade}}">
          </mat-form-field>
-  
 
-  
-    
-    
-    
-    
+
+
+
+
+
+
       </div>
-    
-  
-    
+
+
+
     </mat-expansion-panel>
