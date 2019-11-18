@@ -1,0 +1,195 @@
+<!--
+<img [src]="imgURL" alt="loading" />
+<button (click)="display($event)"> Click</button>
+
+-->
+<mat-expansion-panel class="noteinputconatiner" >
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Note
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <div class="inputfield"> 
+
+     <mat-form-field color="accent">
+          <input matInput [(ngModel)]="e.id" matInput  placeholder="Enter Id">
+     </mat-form-field>
+
+     <mat-form-field color="accent">
+        <input matInput [(ngModel)]="e.name" matInput  placeholder="Enter name">
+     </mat-form-field>
+
+     <mat-form-field color="accent">
+       <textarea matInput [(ngModel)]="e.address" matInput placeholder="Enter address"></textarea>
+     </mat-form-field>
+     <mat-form-field color="accent">
+        <mat-label>Marks</mat-label>
+        <select matNativeControl required [(ngModel)]=e.marks>
+          <option value="F">&lt;35</option>
+          <option value="D">&gt;=40 and &lt;60 </option>
+          <option value="C">&gt;=60 and &lt;70 </option>
+          <option value="B">&gt;=70 and &lt;80 </option>
+          <option value="A">&gt;=80 and &lt;90 </option>
+          <option value="None">Invalid marks</option>
+      
+        </select>
+      </mat-form-field>
+
+
+
+
+  </div>
+
+  <div class="noteSubmit">
+     <button mat-button (click)="save()" color="accent">Done</button>
+  </div>
+
+</mat-expansion-panel>
+
+
+
+<h4>Student Report Card</h4>
+
+
+
+<mat-card class="notecard" *ngFor=" let ee of e_array;">
+    <mat-card-title>
+          {{ee.id}}
+    </mat-card-title>
+    <mat-card-content>
+
+    
+        {{ee.name}}
+         <br>
+        {{ee.address}}
+        <div [ngSwitch]="ee.marks">
+          <div *ngSwitchCase="'F'">Fail</div>
+          <div *ngSwitchCase="'D'">Just Pass</div>
+          <div *ngSwitchCase="'C'">Good</div>
+          <div *ngSwitchCase="'B'">Very Good</div>
+          <div *ngSwitchCase="'A'">Excellent</div>
+          <div *ngSwitchDefault>Invalid Entry</div>
+        </div>
+
+    </mat-card-content>
+
+</mat-card>
+
+
+
+
+<mat-expansion-panel class="noteinputdelete" >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Delete 
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+  
+    <div class="inputdelete"> 
+  
+       <mat-form-field color="accent">
+            <input  [(ngModel)]="d_id" matInput  placeholder="Enter Id to be deleted">
+       </mat-form-field>
+  
+    </div>
+  
+    <div class="notedelte">
+       <button mat-button (click)="deleteid()" color="accent">Done</button>
+    </div>
+  
+  </mat-expansion-panel>
+
+
+
+
+<!--
+<p [ngStyle]="{backgroundColor:getColor()}"
+   [ngClass]="{x:num &lt;=5}">
+   STyle DirEctive
+  </p>
+-->
+
+<mat-expansion-panel class="noteinputedit" >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Update the Records!
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+  
+    <div class="inputfield"> 
+  
+       <mat-form-field color="accent">
+            <input matInput [(ngModel)]="search_id" matInput  placeholder="Enter Id to be updated">
+       </mat-form-field>
+
+
+
+       <mat-form-field color="accent">
+          <input matInput [(ngModel)]="update_name" matInput  placeholder="Enter Name to be updated">
+       </mat-form-field>
+
+       <mat-form-field color="accent">
+          <input matInput [(ngModel)]="update_address" matInput  placeholder="Enter Address to be updated">
+       </mat-form-field>
+
+       <mat-form-field color="accent">
+          <input matInput [(ngModel)]="update_marks" matInput  placeholder="Enter Grade to be updated">
+       </mat-form-field>
+
+       <div class="noteUpdatet">
+          <button mat-button (click)="update()" color="accent">Update</button>
+       </div>
+
+  
+  
+  
+  
+    </div>
+  
+
+  
+  </mat-expansion-panel>
+
+
+
+  <mat-expansion-panel class="noteinputsearch" >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Search the Records!
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    
+      <div class="inputfield"> 
+    
+         <mat-form-field color="accent">
+              <input matInput [(ngModel)]="search_id_record" matInput  placeholder="Enter Id to be Searched">
+         </mat-form-field>
+         <div class="notesearch">
+            <button mat-button (click)="searchme()" color="accent">Search</button>
+         </div>
+  
+  
+         <mat-form-field color="accent">
+            <input matInput  matInput  placeholder="{{search_val_name}}">
+         </mat-form-field>
+  
+         <mat-form-field color="accent">
+            <input matInput   placeholder="{{search_val_add}}">
+         </mat-form-field>
+  
+         <mat-form-field color="accent">
+            <input matInput matInput  placeholder="{{search_grade}}">
+         </mat-form-field>
+  
+
+  
+    
+    
+    
+    
+      </div>
+    
+  
+    
+    </mat-expansion-panel>

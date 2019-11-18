@@ -1,0 +1,47 @@
+.noteinputconatiner{
+    width: 50vw;
+    margin: auto;
+    margin-top: 40px;
+}
+.inputfield{
+    display:flex;
+    flex-direction: column;
+}
+.notecard{
+    width: 15vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    margin: auto;
+    margin-top: 40px;
+
+}
+h4{
+    align-content: space-around;
+    align-self: auto;
+    text-align: center;
+    
+}
+.x{
+    color: yellow;
+}
+.noteinputsearch{
+    width: 50vw;
+    margin: auto;
+    margin-top: 40px;
+
+}
+.noteinputedit{
+
+    width: 50vw;
+    margin: auto;
+    margin-top: 40px;
+
+}
+.noteinputdelete{
+    width: 50vw;
+    margin: auto;
+    margin-top: 40px;
+
+}
